@@ -1,0 +1,11 @@
+# A sample Gemfile
+source "https://rubygems.org"
+
+# gem "rails"
+gem "cucumber"
+gem "rspec"
+gem "RegExpr"
+gem "Selenium"
+gem "selenium-webdriver"
+gem "firewatir"
+gem "page-object"
