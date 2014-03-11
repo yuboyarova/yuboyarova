@@ -1,14 +1,18 @@
 require 'selenium-webdriver'
+require 'page-object/page_factory'
+require 'page-object'
 
 
 Given /^I am on the page of application$/ do
-  @driver.get "http://kontur.ru/Files/userfiles/file/edu/Stagirovka%202012/test/default.html"
+  @page = ApplicationPage.new(@driver, true)
+  #@driver.get "http://kontur.ru/Files/userfiles/file/edu/Stagirovka%202012/test/default.html"
   @n_of_d=1
 end
 
 Then /^I see menu on (.*?)$/ do |day|
-  word=@driver.find_element(:id,"days").text
-  word[0..10].should==day
+  puts @page.days
+  #word=@driver.find_element(:id,"days").text
+  #word[0..10].should==day
 end
 
 Then /^history is empty$/ do

@@ -1,12 +1,13 @@
 require 'selenium-webdriver'
 
 When /^I select the item "(.*)" in a dropdown menu$/ do |day|
-  @select=Selenium::WebDriver::Support::Select.new(@driver.find_element(:id,"days"))
-  for option in @select.options
-    if option.text == day
-      option.click()
-    end
-  end
+  #@select=Selenium::WebDriver::Support::Select.new(@driver.find_element(:id,"days"))
+  #for option in @select.options
+  #  if option.text == day
+  #    option.click()
+  #  end
+  #end
+  @page.days=day
   @n_of_d+=1
 end
 
