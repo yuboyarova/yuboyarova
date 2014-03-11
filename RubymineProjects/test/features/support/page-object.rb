@@ -8,6 +8,8 @@ class ApplicationPage
   button(:make_order, :id =>'makeOrder')
   div(:empty_order, :id=>'validation')
   select_list(:days, :id=>'days')
+  cell(:history, :id=>'history')
+  cell(:no,:id=>'validation')
 #  @driver.find_element(:id,"days").text
 
 end
