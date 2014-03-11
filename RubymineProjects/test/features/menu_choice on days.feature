@@ -1,5 +1,6 @@
 Feature: Menu choice on days
 
+
 Background:
   Given I am on the page of application
 
@@ -30,7 +31,7 @@ Background:
     And history is empty
   @close
 
-
+  #TODO: Please rename
   Scenario: In the history of orders it is correctly displayed days of which menu this order was made.
     When I select the 2 item in menu
     And I push the button "Make order"

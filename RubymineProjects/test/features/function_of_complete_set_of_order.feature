@@ -1,5 +1,6 @@
 Feature: Function of a complete set of the order
 
+#TODO: Please rename feature name and runner
 Background:
   Given I am on the page of application
 
@@ -96,6 +97,7 @@ Background:
     Then The order sum must be 1046.5 rubles
 
   @close
+  #TODO: Please rename
   Scenario: When canceling all changes or in case of the beginning of new session the made choice is cancelled
     When I select the 1 item in menu
     And I select the 2 item in menu
