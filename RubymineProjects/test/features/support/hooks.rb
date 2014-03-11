@@ -4,12 +4,13 @@ require 'selenium-webdriver'
 
 World PageObject::PageFactory
 browser = Selenium::WebDriver.for :firefox
+app_page = ApplicationPage.new(browser, true)
 
 Before  do
- @driver = browser
+  @driver = browser
 end
 
 After ('@close') do
-    @driver.close
+  @driver.close
 
 end

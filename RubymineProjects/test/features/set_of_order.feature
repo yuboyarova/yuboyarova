@@ -1,4 +1,4 @@
-Feature: Function of a complete set of the order
+Feature: Order complete set function
 
 #TODO: Please rename feature name and runner
 Background:
@@ -98,7 +98,7 @@ Background:
 
   @close
   #TODO: Please rename
-  Scenario: When canceling all changes or in case of the beginning of new session the made choice is cancelled
+  Scenario: When canceling all changes the made choice is cancelled
     When I select the 1 item in menu
     And I select the 2 item in menu
     And I press the button "Начать заново"
