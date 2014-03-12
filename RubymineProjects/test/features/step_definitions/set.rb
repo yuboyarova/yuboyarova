@@ -1,14 +1,7 @@
 require 'selenium-webdriver'
 
 Then /^The order sum must be (\d*.\d*) rubles$/ do |sum|
-  @driver.find_element(:id,"orderSum").text.should==sum
-end
-
-
-
-Then /^there will be a text "(.*)"$/ do |text|
-  @driver.find_element(:id,"validation").text.should==text
-
+  @page.sum.should==sum
 end
 
 Then /^it isn't selected any item from the menu$/ do

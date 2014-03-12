@@ -1,13 +1,12 @@
 Feature: Menu choice on days
 
-
-Background:
-  Given I am on the page of application
+  Background:
+    Given I am on the page of application
 
 
   Scenario: To check a correctness of display of days of the week and absence of excess lines in a dropdown menu.
     When I click on the dropdown menu
-    Then I see all days of the week:понедельник, вторник, среда, четверг, пятница, суббота, воскресенье
+    Then I see all days of the week:["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
 
 
   Scenario: Check of compliance of the menu to a day of the week.
@@ -31,7 +30,7 @@ Background:
     And history is empty
   @close
 
-  #TODO: Please rename
+
   Scenario: History of orders is correctly displayed
     When I select the 2 item in menu
     And I push the button "Make order"

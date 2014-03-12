@@ -10,6 +10,8 @@ class ApplicationPage
   select_list(:days, :id=>'days')
   cell(:history, :id=>'history')
   cell(:no,:id=>'validation')
-#  @driver.find_element(:id,"days").text
+  cell(:menu, :id=>'menu')
+  button(:default_page, :xpath=>'/html/body/div/a')
+  cell(:sum,:id=>'orderSum')
 
 end

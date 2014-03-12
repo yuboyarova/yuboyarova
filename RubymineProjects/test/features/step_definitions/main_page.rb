@@ -22,10 +22,8 @@ end
 
 Then /^I see a text (.*?)$/ do |text|
   @page.no.should==text
-  #@driver.find_element(:id,"validation").text.should==text
 end
 
-When /^The name of the tab is (.*?)$/ do |tab_name|
-  @driver.title.should==tab_name
-  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+Then /^The name of the tab is (.*?)$/ do |tab_name|
+  @page.title.should==tab_name
 end

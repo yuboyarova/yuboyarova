@@ -1,6 +1,5 @@
 Feature: Order complete set function
 
-#TODO: Please rename feature name and runner
 Background:
   Given I am on the page of application
 
@@ -38,7 +37,7 @@ Background:
     When I select all item of all days in menu
     And I push the button "Make order"
     And I push the button "Make order"
-    Then there will be a text "Нельзя сделать пустой заказ!!!"
+    Then I see a text Нельзя сделать пустой заказ!!!
     Then I see in history the following line: 'Понедельник, '<order time>' каша манная, яичница из двух яиц, шведский стол, плов. Вторник - салат "Цезарь", суп-пюре из брокколи, рагу из свинины, хлеб. Среда - каша пшенная, борщ, отбивная из курицы, пюре, хлеб. Четверг - салат "Непростой", щи, жаркое в горшочках, хлеб. Пятница - салат "Мистерия весны", лагман, бефстроганов, капуста жареная, хлеб. Суббота - каша кукурузная, яичница с ветчиной, суп "Всегда с тобой", хлеб. Воскресенье - цыпленок табака, тыква тушеная со свининой, рыбацкая уха, хлеб. Списано с личного счета 2572.95 р.'
     Then it isn't selected any item from the menu
 
@@ -97,7 +96,6 @@ Background:
     Then The order sum must be 1046.5 rubles
 
   @close
-  #TODO: Please rename
   Scenario: When canceling all changes the made choice is cancelled
     When I select the 1 item in menu
     And I select the 2 item in menu
